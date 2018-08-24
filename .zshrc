@@ -95,21 +95,11 @@ source $ZSH/oh-my-zsh.sh
 
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  export GOROOT=/opt/go
-  export GOPATH=$HOME/go
-  export ANDROID_HOME=$HOME/Android/Sdk
-  export CUDA_HOME=/usr/local/cuda
-  export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
-  export PATH="$HOME/.jenv/bin:$PATH"
-  export PATH=$ANDROID_HOME/platform-tools:$PATH
-  export PATH=${CUDA_HOME}/bin:$PATH
-  export PATH="$PATH:$(yarn global bin):$HOME/bin"
+  source $HOME/.zshrc_ubuntu
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  source /usr/local/opt/autoenv/activate.sh
-  export ANDROID_HOME=${HOME}/Library/Android/sdk/
-  export PATH=${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:"/usr/local/opt/sphinx-doc/bin":$PATH
-else
+  source $HOME/.zshrc_darwin
+ else
   # Unknown.
 fi
 

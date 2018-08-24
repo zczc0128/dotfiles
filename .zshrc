@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+export ZSH_CUSTOM=$HOME/.zsh_custom
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -60,6 +62,15 @@ ZSH_THEME="honukai"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  autoenv
+  golang
+  yarn
+
+  # customized plugins
+  myfunction
+  android
+  dotfiles
+  proxy
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -92,19 +103,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  source $HOME/.zshrc_ubuntu
-
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-  source $HOME/.zshrc_darwin
- else
-  # Unknown.
-fi
-
-alias tps="export http_proxy=socks5://localhost:1080; export https_proxy=socks5://localhost:1080"
-alias tph="export http_proxy=http://localhost:1081;   export https_proxy=http://localhost:1081"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-eval "$(jenv init -)"

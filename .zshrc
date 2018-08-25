@@ -66,7 +66,6 @@ plugins=(
   yarn
 
   # customized plugins
-  myalias
   android
   miniconda
 )

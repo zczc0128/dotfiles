@@ -8,12 +8,6 @@ for minicondadir in $minicondadirs; do
     fi
 done
 
-if [[ $FOUND_MINICONDA -eq 0 ]]; then
-    if (( $+commands[brew] )) && minicondadir="$(brew --prefix miniconda)"; then
-        [[ -d "${minicondadir}/bin" ]] && FOUND_MINICONDA=1
-    fi
-fi
-
 if [[ $FOUND_MINICONDA -eq 1 ]]; then
     export PATH="${minicondadir}/bin:$PATH"
 else

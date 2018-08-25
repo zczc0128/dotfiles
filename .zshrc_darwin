@@ -1,4 +1,0 @@
-source /usr/local/opt/autoenv/activate.sh
-export ANDROID_HOME=${HOME}/Library/Android/sdk/
-export PATH=${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:"/usr/local/opt/sphinx-doc/bin":$PATH
-

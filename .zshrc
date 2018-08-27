@@ -60,11 +60,11 @@ ZSH_CUSTOM=$HOME/.zsh_custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   autoenv
+  git
   golang
+  jenv
   yarn
-
   # customized plugins
   goext
   android

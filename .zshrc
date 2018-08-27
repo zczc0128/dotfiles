@@ -66,6 +66,7 @@ plugins=(
   yarn
 
   # customized plugins
+  goext
   android
   miniconda
   zsh-autosuggestions

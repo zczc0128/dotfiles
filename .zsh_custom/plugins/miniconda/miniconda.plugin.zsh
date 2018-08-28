@@ -9,7 +9,8 @@ for minicondadir in $minicondadirs; do
 done
 
 if [[ $FOUND_MINICONDA -eq 1 ]]; then
-    export PATH="${minicondadir}/bin:$PATH"
+	source  ${minicondadir}/etc/profile.d/conda.sh
+	conda activate
 else
 fi
 

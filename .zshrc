@@ -68,7 +68,7 @@ plugins=(
   # customized plugins
   goext
   android
-  miniconda
+ # miniconda
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -103,6 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [ -x "$(command -v yarn)" ]; then
+    export PATH=`yarn global bin`:$PATH
+fi	
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tps="export http_proxy=socks5://localhost:1080; export https_proxy=socks5://localhost:1080"

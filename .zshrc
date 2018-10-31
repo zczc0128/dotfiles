@@ -65,6 +65,10 @@ plugins=(
   golang
   jenv
   yarn
+  minikube
+  kubectl
+  kube-ps1
+  helm
   # customized plugins
   goext
   android

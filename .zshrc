@@ -65,7 +65,6 @@ plugins=(
   golang
   jenv
   yarn
-  minikube
   kubectl
   kube-ps1
   helm

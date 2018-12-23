@@ -10,3 +10,6 @@
 [submodule ".zsh_custom/themes/powerlevel9k"]
 	path = .zsh_custom/themes/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule ".jenv"]
+	path = .jenv
+	url = https://github.com/gcuisinier/jenv.git

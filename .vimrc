@@ -14,6 +14,7 @@ else
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
   " Additional plugins here.
+  call minpac#add('Valloric/YouCompleteMe')
   call minpac#add('airblade/vim-gitgutter')
   call minpac#add('altercation/vim-colors-solarized')
   call minpac#add('editorconfig/editorconfig-vim')
@@ -61,7 +62,7 @@ set showmatch
 " Searching
 set incsearch
 set hlsearch
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <CR> :nohlsearch<CR>
 
 " Folding
 set foldenable
@@ -72,12 +73,24 @@ nnoremap <space> za
 
 " Leader Shortcuts
 let mapleader=","
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
-nnoremap <leader>ez :vsp ~/.zshrc<CR>
+nnoremap <leader>ev :sp $MYVIMRC<CR>
+nnoremap <leader>ez :sp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>s :mksession<CR>
 
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
 
+" support mouse
+set mouse=a
 
 set laststatus=2
 set noshowmode
@@ -96,4 +109,46 @@ filetype plugin on
 nnoremap <C-p> :<C-u>FZF<CR>
 map <C-n> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+let g:deoplete#enable_at_startup = 1
 
+" YouCompleteMe
+"默认配置文件路径"
+let g:ycm_semantic_triggers =  {
+  \   'c': ['->', '.'],
+  \   'objc': ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \            're!\[.*\]\s'],
+  \   'ocaml': ['.', '#'],
+  \   'cpp,cuda,objcpp': ['->', '.', '::'],
+  \   'perl': ['->'],
+  \   'php': ['->', '::'],
+  \   'cs,d,elixir,go,groovy,java,javascript,julia,perl6,python,scala,typescript,vb': ['.'],
+  \   'ruby,rust': ['.', '::'],
+  \   'lua': ['.', ':'],
+  \   'erlang': [':'],
+  \ }
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"打开vim时不再询问是否加载ycm_extra_conf.py配置"
+let g:ycm_confirm_extra_conf=0
+set completeopt=longest,menu
+"python解释器路径"
+let g:ycm_path_to_python_interpreter='/usr/bin/python'
+"是否开启语义补全"
+let g:ycm_seed_identifiers_with_syntax=1
+"是否在注释中也开启补全"
+let g:ycm_complete_in_comments=1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+"开始补全的字符数"
+let g:ycm_min_num_of_chars_for_completion=2
+"补全后自动关机预览窗口"
+let g:ycm_autoclose_preview_window_after_completion=1
+" 禁止缓存匹配项,每次都重新生成匹配项"
+let g:ycm_cache_omnifunc=0
+"字符串中也开启补全"
+let g:ycm_complete_in_strings = 1
+"离开插入模式后自动关闭预览窗口"
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"上下左右键行为"
+inoremap <expr> <Down>     pumvisible() ? '\<C-n>' : '\<Down>'
+inoremap <expr> <Up>       pumvisible() ? '\<C-p>' : '\<Up>'
+inoremap <expr> <PageDown> pumvisible() ? '\<PageDown>\<C-p>\<C-n>' : '\<PageDown>'
+inoremap <expr> <PageUp>   pumvisible() ? '\<PageUp>\<C-p>\<C-n>' : '\<PageUp>'

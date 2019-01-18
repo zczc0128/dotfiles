@@ -62,11 +62,12 @@ ZSH_CUSTOM=$HOME/.zsh_custom
 plugins=(
   git
   golang
-  jenv
+# jenv
   yarn
   kubectl
   kube-ps1
   helm
+
   # customized plugins
   goext
   android

@@ -13,3 +13,6 @@
 [submodule ".jenv"]
 	path = .jenv
 	url = https://github.com/gcuisinier/jenv.git
+[submodule ".vim/pack/minpac/opt/minpac"]
+    path = .vim/pack/minpac/opt/minpac
+    url = https://github.com/k-takata/minpac.git

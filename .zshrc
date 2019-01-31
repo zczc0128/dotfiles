@@ -117,3 +117,10 @@ fi
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tps="export http_proxy=socks5://localhost:1080;export https_proxy=socks5://localhost:1080"
 alias tph="export http_proxy=http://localhost:1081;export https_proxy=http://localhost:1081"
+
+# Decode JWT header
+alias jwth="decode_jwt 1"
+
+# Decode JWT Payload
+alias jwtp="decode_jwt 2"
+

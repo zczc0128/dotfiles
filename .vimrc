@@ -1,4 +1,4 @@
-" ~/.vimrc
+set nocompatible
 " Try to load minpac.
 packadd minpac
 
@@ -147,8 +147,3 @@ let g:ycm_cache_omnifunc=0
 let g:ycm_complete_in_strings = 1
 "离开插入模式后自动关闭预览窗口"
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-"上下左右键行为"
-inoremap <expr> <Down>     pumvisible() ? '\<C-n>' : '\<Down>'
-inoremap <expr> <Up>       pumvisible() ? '\<C-p>' : '\<Up>'
-inoremap <expr> <PageDown> pumvisible() ? '\<PageDown>\<C-p>\<C-n>' : '\<PageDown>'
-inoremap <expr> <PageUp>   pumvisible() ? '\<PageUp>\<C-p>\<C-n>' : '\<PageUp>'

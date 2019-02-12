@@ -3,7 +3,7 @@ This repo is following the best practice from https://developer.atlassian.com/bl
 
 # Installation
 ```bash
-bash -c "$(curl -sSL https://raw.githubusercontent.com/zhoumingjun/dotfiles/master/.bin/dotfiles-install.sh)"
+bash -c "$(curl -sSL https://raw.githubusercontent.com/zczc0128/dotfiles/master/.bin/dotfiles-install.sh)"
 $HOME/.bin/dotfiles-update-submodules.sh
 ```
 

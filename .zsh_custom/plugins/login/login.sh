@@ -2,8 +2,8 @@
 set host [lindex $argv 0]
 
 set TERMSERV jump01.bj.sensetime.com
-set USER zhoumingjun
-set PASSWORD Passw0rd@ 
+set USER xxx
+set PASSWORD xxxx
 
 # 登录跳板机
 spawn ssh -l $USER $TERMSERV

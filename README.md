@@ -7,3 +7,5 @@ bash -c "$(curl -sSL https://raw.githubusercontent.com/zczc0128/dotfiles/master/
 $HOME/.bin/dotfiles-update-submodules.sh
 ```
 
+Note: many themes require installing the Powerline Fonts in order to render properly.
+https://github.com/powerline/fonts
